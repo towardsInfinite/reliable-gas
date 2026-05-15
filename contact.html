@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Reliable Gas Plumbing Ltd</title>
+  <meta name="description" content="Contact Reliable Gas Plumbing Ltd. Based in Ealing, serving Richmond, Putney, and Twickenham.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    .contact-info-card {
+      background: var(--surface-color);
+      border: 1px solid var(--glass-border);
+      padding: var(--spacing-md);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-md);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--glass-border);
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: inherit;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+    [data-theme="light"] .form-control {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="ph ph-fire"></i></div>
+          Reliable Gas
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="boiler-repair.html">Boiler Repair</a>
+          <a href="boiler-installation.html">Boiler Install</a>
+          <a href="boiler-servicing.html">Servicing</a>
+          <a href="gas-safety-certificate.html">Gas Safety</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"><i class="ph ph-sun"></i></button>
+          <a href="tel:07533234974" class="btn btn-primary"><i class="ph ph-phone-call"></i> 07533 234974</a>
+        </div>
+        <button id="mobile-menu-btn" class="mobile-menu-btn"><i class="ph ph-list"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <button id="mobile-menu-close" class="mobile-menu-close"><i class="ph ph-x"></i></button>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-header reveal">
+      <div class="container">
+        <h1>Get in <span class="text-gradient">Touch</span></h1>
+        <p>Experience the premium standard of gas engineering. Reach out to our dedicated team today.</p>
+      </div>
+    </section>
+
+    <section class="container" style="padding: var(--spacing-lg) 0;">
+      <div class="contact-grid">
+        <div class="reveal" style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+          
+          <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
+            <div class="contact-icon" style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: var(--radius-sm); width: 40px; height: 40px; font-size: 1.25rem;"><i class="ph-fill ph-phone"></i></div>
+            <div>
+              <p style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">Phone</p>
+              <a href="tel:07533234974" style="font-size: 1.125rem; font-weight: 700; color: var(--text-color);">07533234974</a>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
+            <div class="contact-icon" style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: var(--radius-sm); width: 40px; height: 40px; font-size: 1.25rem;"><i class="ph-fill ph-envelope"></i></div>
+            <div>
+              <p style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">Email</p>
+              <a href="mailto:info@reliablegasplumbing.co.uk" style="font-size: 1.125rem; font-weight: 700; color: var(--text-color);">info@reliablegasplumbing.co.uk</a>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
+            <div class="contact-icon" style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: var(--radius-sm); width: 40px; height: 40px; font-size: 1.25rem;"><i class="ph-fill ph-map-pin"></i></div>
+            <div>
+              <p style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">Service Area</p>
+              <p style="font-size: 1.125rem; font-weight: 700; color: var(--text-color);">All London Boroughs</p>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
+            <div class="contact-icon" style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: var(--radius-sm); width: 40px; height: 40px; font-size: 1.25rem;"><i class="ph-fill ph-clock"></i></div>
+            <div>
+              <p style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem;">Hours</p>
+              <p style="font-size: 1.125rem; font-weight: 700; color: var(--text-color);">Mon-Sat 7am-8pm &bull; Emergency 24/7</p>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--spacing-md); border: 1px solid rgba(37, 99, 235, 0.3); background: rgba(37, 99, 235, 0.05); padding: var(--spacing-md); border-radius: var(--radius-sm);">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: var(--spacing-sm);">
+              <div style="width: 8px; height: 8px; background: var(--secondary-color); border-radius: 50%;"></div>
+              <p style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--secondary-color); text-transform: uppercase;">24/7 Emergency Line</p>
+            </div>
+            <p style="font-size: 2rem; font-weight: 800; color: var(--text-color); margin-bottom: var(--spacing-xs);">07533234974</p>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">No hot water? Boiler breakdown? Call now.</p>
+          </div>
+        </div>
+        
+        <div class="reveal" style="padding-left: var(--spacing-md);">
+          <form style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+            <div>
+              <label for="name" style="display: block; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Full Name</label>
+              <input type="text" id="name" style="width: 100%; padding: 1rem; border: none; background: white; border-radius: 0; outline: none; font-size: 1rem; color: #111;">
+            </div>
+            <div>
+              <label for="email" style="display: block; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Email Address</label>
+              <input type="email" id="email" style="width: 100%; padding: 1rem; border: none; background: white; border-radius: 0; outline: none; font-size: 1rem; color: #111;">
+            </div>
+            <div>
+              <label for="phone" style="display: block; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Phone Number</label>
+              <input type="tel" id="phone" style="width: 100%; padding: 1rem; border: none; background: white; border-radius: 0; outline: none; font-size: 1rem; color: #111;">
+            </div>
+            <div>
+              <label for="message" style="display: block; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Message</label>
+              <textarea id="message" rows="4" style="width: 100%; padding: 1rem; border: none; background: white; border-radius: 0; outline: none; font-size: 1rem; color: #111; resize: none;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; border-radius: 0; font-size: 1rem; text-transform: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: var(--secondary-color); color: #111; font-weight: 700; border: none;">
+              <i class="ph ph-paper-plane-tilt" style="font-size: 1.25rem;"></i> Send Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: white;"><div class="logo-icon"><i class="ph ph-fire"></i></div>Reliable Gas</a>
+          <p>Premium, fast, and certified gas engineering & plumbing services across West London.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Contact Info</h4>
+          <ul style="color: #94A3B8;">
+            <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;"><i class="ph ph-map-pin" style="margin-top: 4px;"></i> Suite 4, Second Floor,<br>84 Uxbridge Road,<br>London, W13 8RA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Reliable Gas Plumbing Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
