@@ -1044,3 +1044,164 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* SaaS Hero Redesign */
+.saas-header {
+  position: relative;
+  padding: calc(var(--spacing-xl) + 80px) 0 var(--spacing-xl);
+  text-align: center;
+  overflow: hidden;
+  background: var(--bg-color);
+  z-index: 1;
+}
+
+.saas-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.15), transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.saas-header::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.5;
+  z-index: -2;
+}
+[data-theme="light"] .saas-header::after {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+.saas-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--surface-color);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.saas-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.04em;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.1;
+}
+
+.saas-header p {
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto var(--spacing-lg);
+  color: var(--text-muted);
+}
+
+.saas-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.btn-glow {
+  position: relative;
+}
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+  z-index: -1;
+  border-radius: var(--radius-full);
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+.btn-glow:hover::before {
+  opacity: 0.7;
+}
+
+/* Trust Dashboard Panel */
+.trust-dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+}
+
+@keyframes slideUpFade {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.trust-metric {
+  text-align: center;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform var(--transition-fast);
+}
+[data-theme="light"] .trust-metric {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.trust-metric:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary-color);
+}
+
+.trust-metric-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.trust-metric-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.whatsapp-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #25D366;
+  font-weight: 600;
+  background: rgba(37, 211, 102, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+.whatsapp-cta:hover {
+  background: rgba(37, 211, 102, 0.2);
+  transform: translateY(-2px);
+}
